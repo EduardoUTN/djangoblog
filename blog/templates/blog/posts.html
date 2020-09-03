@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+</head>
+<body>
+    <div><a href="#">BENVENIDO</a></div>
+    {% for post in posts %}
+        <div>
+            <p>Titulo: <a href="/blog/posts/{post.id}">{{ post.title }}</a></p>
+            <p>Publicado: {{ post.publish_date }}</p>
+            <p>{{ post.text }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
