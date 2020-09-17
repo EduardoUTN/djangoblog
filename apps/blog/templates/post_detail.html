@@ -5,7 +5,8 @@
 <small>Por: {{ post.author.first_name }} {{ post.author.last_name }}</small><br/>
 <hr>
 <br/>
-{{ post.text }}
+{{ post.text }}<br/>
+<small>Creado: {{ post.create_date }}</small>
 
 <br/><br/>
 <a href="{% url 'landing'%}" class="btn btn-dark">Back</a>
