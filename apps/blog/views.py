@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.utils import timezone
 from django.views.generic import ListView, DetailView, CreateView
 from .models import Post
+from .forms import PostForm
 
 # Homepage
 def home(request):
@@ -28,5 +29,6 @@ class PostDetailView(DetailView):
 #POST Crear un nuevo post
 class PostCreateView(CreateView):
       model = Post
+      form_class = PostForm
       template_name = 'post_new.html'
-      fields = '__all__'
+      #fields = '__all__'
