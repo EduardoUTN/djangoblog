@@ -2,12 +2,19 @@
 
 {% block content %}
 
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p}}
-    <button>Enviar</button>
-</form>
+<h1> Agregar un Nuevo Post</h1>
+
+<div class="form-group">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button class="btn btn-dark">Enviar</button>
+    </form>
+</div>
 
 <br/><br/>
-<a href="{% url 'home'%}" class="btn btn-dark">Back</a>
+<a href="{% url 'home' %}" class="btn btn-dark">Back</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P2YPG8PO9JU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.932670523432!2d-59.04194098519431!3d-28.51167336863925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944fab3373a2348b%3A0xfaa621d1a75f2a4c!2sConstituci%C3%B3n%2C%20Bella%20Vista%2C%20Corrientes!5e0!3m2!1ses-419!2sar!4v1600380869123!5m2!1ses-419!2sar" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 {% endblock %}
