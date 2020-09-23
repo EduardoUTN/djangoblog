@@ -21,4 +21,6 @@ urlpatterns = [
     path('', HomeView.as_view(), name="landing"),
     path('admin/', admin.site.urls),
     path('blog/', include('apps.blog.urls')),
+    path('members/', include('django.contrib.auth.urls')),
+    path('members/', include('apps.members.urls')),
 ]
